@@ -1,18 +1,27 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { Header, Menu, Icon } from 'semantic-ui-react'
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      hi: 'lol',
+    }
+  }
+
+  componentDidMount() {
+    console.log('mounted')
+  }
+
   render() {
     return (
       <div className='App'>
-        <div className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className='App-intro'>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Header textAlign='center' as='h1'>
+          <Icon name='code' />
+          <Header.Content>
+            Which JavaScript Error Are You?
+          </Header.Content>
+        </Header>
       </div>
     )
   }
