@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Header, Menu, Icon } from 'semantic-ui-react'
+import axios from 'axios'
 
 class App extends Component {
   constructor() {
@@ -10,7 +11,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log('mounted')
+    axios.get('http://localhost:3001/quizzes')
+      .then(res => console.log(res))
   }
 
   render() {
@@ -19,7 +21,7 @@ class App extends Component {
         <Header textAlign='center' as='h1'>
           <Icon name='code' />
           <Header.Content>
-            Which JavaScript Error Are You?
+            Quizzes
           </Header.Content>
         </Header>
       </div>
