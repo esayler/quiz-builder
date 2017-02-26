@@ -1,26 +1,42 @@
 {
   "name": "quiz-builder",
   "version": "1.0.0",
-  "description": "",
+  "description": "A fork of turingschool-examples quiz-builder",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"npm run server\" \"cd client && npm start\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "babel-node server.js",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/turingschool-examples/quiz-builder.git"
+    "url": "https://github.com/esayler/quiz-builder.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Eric Sayler",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/turingschool-examples/quiz-builder/issues"
+    "url": "https://github.com/esayler/quiz-builder/issues"
   },
-  "homepage": "https://github.com/turingschool-examples/quiz-builder",
+  "homepage": "https://github.com/esayler/quiz-builder",
   "dependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "express-cors": "0.0.3",
     "express-logger": "0.0.3",
     "locus": "^1.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.3.0",
+    "eslint": "^3.16.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-config-standard-jsx": "^3.3.0",
+    "eslint-config-standard-react": "^4.2.0",
+    "eslint-loader": "^1.6.3",
+    "eslint-plugin-promise": "^3.4.2",
+    "eslint-plugin-react": "^6.10.0",
+    "eslint-plugin-standard": "^2.0.1"
   }
 }
