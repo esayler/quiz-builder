@@ -166,7 +166,7 @@ app.post('/scores', (request, response) => {
     scoreType = 'lowest'
   } else if (score >= 4 && score < 8) {
     scoreType = 'low'
-  } else if (score >= 8 && score <= 12) {
+  } else if (score >= 8 && score < 12) {
     scoreType = 'high'
   } else {
     scoreType = 'highest'
